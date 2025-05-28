@@ -1,0 +1,104 @@
+:root {
+    /* Neutros */
+    --white: #f0f0f0;
+    --medium-gray-a: rgba(117, 116, 116, 0.9);
+    --dark-gray: #333;
+
+    /* Verde institucional */
+    --green-primary: #2cb135;
+
+    /* Verde escuro (cartões) */
+    --green-dark-1: #002922; /* Escuro base */
+    --green-dark-2: #015c32; /* Tom escuro médio */
+    --green-dark-3: #02a952; /* Intermediário (mantido) */
+    --green-dark-4: #05ce5a;
+
+    /* Verde claro (cartões e botões) */
+    --green-bright: #00d449;
+    --green-neon: #03ff5b;
+    --green-mint: #00ff88;
+
+    /* Tons intermediários */
+    --green-mid-1: #004c3f;
+    --green-mid-2: #00b47f;
+    --green-mid-3: #00b447;
+    --green-mid-4: #003b2d;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    flex-grow: 1;
+    padding-bottom: 40px;
+}
+
+/* Header geral */
+header {
+    background-color: var(--green-primary);
+    padding: 1rem 2rem;
+    height: 10%;
+}
+
+/* Container para alinhar logo + título */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Título */
+.header-title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: var(--medium-gray-a);
+    color: #000000;
+    text-align: center;
+}
+
+#copyright {
+    padding: 1%;
+    color: rgb(255, 255, 255);
+}
+#versao{
+    position: relative;
+    margin-top: -1%;
+    color: #c7c7c7;
+    font-style: italic;
+    font-size: 10px;
+}
