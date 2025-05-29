@@ -12,7 +12,7 @@ app.register_blueprint(admin_bp, url_prefix='/adminuser')
 # Rota raiz (/) direciona para tela de login admin
 @app.route("/")
 def home_redirect():
-    return redirect(url_for('admin.adminuser'))
+    return redirect(url_for('home.home'))
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=8080)
