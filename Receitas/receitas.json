@@ -1,0 +1,16 @@
+[
+  {
+    "nome": "Pato Rústico",
+    "autor": "Felipe Ghizoni",
+    "iniciais": "FG",
+    "imagem": "/static/img/pato.jpg",
+    "descricao": "Descrição completa da receita de Pato Rústico..."
+  },
+  {
+    "nome": "Filé Cremoso",
+    "autor": "Anna Santos",
+    "iniciais": "AS",
+    "imagem": "/static/img/file.jpg",
+    "descricao": "Descrição completa da receita de Filé Cremoso..."
+  }
+]

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-image: url('background.jpg'); /* Substitua pela sua imagem */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-box h2 {
+  color: #fff;
+}
+
+.login-box p {
+  color: #ddd;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px 35px 10px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.clear-btn:hover {
+  color: red;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(200, 200, 200, 0.7);
+  cursor: pointer;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: rgba(200, 200, 200, 1);
+}
+
+.login-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #7f4af3;
+  cursor: pointer;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #5a2ccf;
+}

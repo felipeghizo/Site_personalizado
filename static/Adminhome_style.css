@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('/static/img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+}
+
+.category-tabs button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.category-tabs button.active,
+.category-tabs button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.recipe-list {
+    width: 55%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.add-button {
+    grid-column: span 2;
+    padding: 10px;
+    background: #d1c4e9;
+    border: none;
+    border-radius: 10px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.user-badge {
+    background: #c5b1f3;
+    color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.info {
+    text-align: left;
+}
+
+.info h3 {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions .edit, .actions .delete {
+    flex: 1;
+    margin: 2px;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.actions .edit {
+    background: #c5b1f3;
+    color: #333;
+}
+
+.actions .delete {
+    background: #f5b1b1;
+    color: #333;
+}
+
+.recipe-details {
+    width: 35%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.recipe-details h2 {
+    margin-top: 0;
+}
+
+.recipe-details .autor {
+    color: #ccc;
+}
+
+.recipe-details .descricao {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.recipe-details .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.recipe-details .btn {
+    flex: 1;
+    padding: 10px;
+    background: #c5b1f3;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -1,15 +1,18 @@
-from flask import Flask, render_template
-from Routes.Index_route import index_bp
+from flask import Flask, redirect, url_for
+from Routes.Home_route import home_bp
+from Routes.Adminuser_route import admin_bp 
 
 app = Flask(__name__)
+app.secret_key = 'chave_secreta_segura'
 
-app.register_blueprint(index_bp, url_prefix='/dcre')
+# Registrando os blueprints com prefixos
+app.register_blueprint(home_bp, url_prefix='/home')
+app.register_blueprint(admin_bp, url_prefix='/adminuser')
 
-app.secret_key = 'Somos_uma_empresa_de_tecnologia_pensada_para_aprimorar_o_seu_negócio_e_a_sua_casa.'
-
+# Rota raiz (/) direciona para tela de login admin
 @app.route("/")
-def home():
-    return render_template("portal/index.html")  
+def home_redirect():
+    return redirect(url_for('admin.adminuser'))
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port="8080")
+    app.run(debug=True, host="0.0.0.0", port=8080)

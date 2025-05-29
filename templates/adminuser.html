@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='adminuser_style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>Login admin</h2>
+      <p>Insira a senha de admin</p>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <form method="POST">
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="Digite a senha">
+          <button type="button" class="clear-btn" onclick="clearInput()">&#10006;</button>
+        </div>
+
+        <div class="buttons">
+          <a href="/" class="cancel-btn">Cancelar</a>
+          <button type="submit" class="login-btn">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function clearInput() {
+        document.getElementById('password').value = '';
+    }
+
+    function cancel() {
+        alert('Operação cancelada!');
+        window.location.href = '/'; // Redireciona para a home, pode ajustar conforme sua necessidade
+    }
+
+    function login() {
+        const password = document.getElementById('password').value;
+        if (password === '') {
+            alert('Por favor, insira a senha.');
+        } else {
+            // Aqui você pode colocar sua lógica de autenticação
+            alert('Login realizado com sucesso!');
+            // Redirecionar para a página admin
+            window.location.href = '/admin-dashboard';
+        }
+    }
+
+    function clearInput() {
+        document.getElementById('password').value = '';
+    }
+
+  </script>
+</body>
+</html>

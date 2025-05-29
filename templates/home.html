@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gourmet Receitas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
+</head>
+<body>
+
+    <nav class="category-tabs">
+        <button class="active">Salgados</button>
+        <button>Doces</button>
+        <button>Drinks</button>
+    </nav>
+
+    <main class="container">
+        <section class="recipe-list">
+            {% for receita in receitas %}
+            <div class="card" onclick="mostrarDetalhes('{{ loop.index0 }}')">
+                <div class="user-badge">{{ receita.iniciais }}</div>
+                <div class="title">{{ receita.nome }}</div>
+                <div class="author">{{ receita.autor }}</div>
+                <img src="{{ receita.imagem }}" alt="{{ receita.nome }}">
+            </div>
+            {% endfor %}
+        </section>
+
+        <section class="recipe-details" id="detalhes-receita">
+            <h2 id="titulo-detalhe">Pato Rústico</h2>
+            <p class="autor">Felipe Ghizoni</p>
+            <p class="descricao">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+            </p>
+            <div class="actions">
+                <button class="btn">Saber mais</button>
+                <button class="btn">Cozinhar</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const dadosReceitas = JSON.parse(`{{ receitas | tojson | safe }}`);
+
+        function mostrarDetalhes(index) {
+            const r = dadosReceitas[index];
+            document.getElementById('titulo-detalhe').innerText = r.nome;
+            document.querySelector('.autor').innerText = r.autor;
+            document.querySelector('.descricao').innerText = r.descricao;
+        }
+    </script>
+</body>
+</html>
