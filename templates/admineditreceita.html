@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Receita</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Editreceita_style.css') }}">
+</head>
+<body>
+    <h1>Editar Receita</h1>
+
+    <form action="{{ url_for('admin.edit_receita', index=index) }}" method="POST">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" value="{{ receita.nome }}"><br><br>
+
+        <label>Autor:</label><br>
+        <input type="text" name="autor" value="{{ receita.autor }}"><br><br>
+
+        <label>Ingredientes:</label><br>
+        <textarea name="ingredientes">{{ receita.ingredientes }}</textarea><br><br>
+
+        <label>Modo de Preparo:</label><br>
+        <textarea name="modo_preparo">{{ receita.modo_preparo }}</textarea><br><br>
+
+        <label>Imagem (URL):</label><br>
+        <input type="text" name="imagem" value="{{ receita.imagem }}"><br><br>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+
+    <a href="{{ url_for('admin.dashboard') }}">Voltar</a>
+
+    <script>
+        // Mensagens de feedback simples (pode ser ampliado conforme necessidade)
+        document.addEventListener('DOMContentLoaded', () => {
+            const messages = document.querySelectorAll('.flash-message');
+            messages.forEach(msg => {
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 3000);
+            });
+        });
+
+    </script>
+</body>
+</html>

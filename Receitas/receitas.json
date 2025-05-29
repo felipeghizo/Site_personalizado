@@ -1,16 +1,17 @@
 [
-  {
-    "nome": "Pato Rústico",
-    "autor": "Felipe Ghizoni",
-    "iniciais": "FG",
-    "imagem": "/static/img/pato.jpg",
-    "descricao": "Descrição completa da receita de Pato Rústico..."
-  },
-  {
-    "nome": "Filé Cremoso",
-    "autor": "Anna Santos",
-    "iniciais": "AS",
-    "imagem": "/static/img/file.jpg",
-    "descricao": "Descrição completa da receita de Filé Cremoso..."
-  }
+    {
+        "nome": "Pato Rústico",
+        "autor": "Felipe Ghizoni",
+        "iniciais": "FG",
+        "imagem": "/static/img/bacalhau.png",
+        "descricao": "Descrição completa da receita de Pato Rústico..."
+    },
+    {
+        "nome": "Felipe de Oliveira Ghizoni",
+        "autor": "Anna Santos",
+        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
+        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
+        "imagem": "",
+        "iniciais": "AS"
+    }
 ]

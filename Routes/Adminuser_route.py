@@ -47,7 +47,8 @@ def add_receita():
     if request.method == 'POST':
         nome = request.form.get('nome')
         autor = request.form.get('autor')
-        descricao = request.form.get('descricao')
+        ingredientes = request.form.get('ingredientes')
+        modo_preparo = request.form.get('modo_preparo')
         imagem = request.form.get('imagem')
 
         with open(CAMINHO_JSON, 'r', encoding='utf-8') as f:
@@ -56,7 +57,8 @@ def add_receita():
         nova_receita = {
             'nome': nome,
             'autor': autor,
-            'descricao': descricao,
+            'ingredientes': ingredientes,
+            'modo_preparo': modo_preparo,
             'imagem': imagem,
             'iniciais': ''.join([palavra[0].upper() for palavra in autor.split()])
         }
@@ -70,7 +72,6 @@ def add_receita():
         return redirect(url_for('admin.dashboard'))
 
     return render_template('adminaddreceita.html')
-
 
 # ✏️ Editar receita
 @admin_bp.route('/admin-editreceita/<int:index>', methods=['GET', 'POST'])
@@ -91,6 +92,10 @@ def edit_receita(index):
         receita['nome'] = request.form.get('nome')
         receita['autor'] = request.form.get('autor')
         receita['descricao'] = request.form.get('descricao')
+        ingredientes = request.form.get('ingredientes')
+        modo_preparo = request.form.get('modo_preparo')
+        receita['ingredientes'] = ingredientes
+        receita['modo_preparo'] = modo_preparo
         receita['imagem'] = request.form.get('imagem')
         receita['iniciais'] = ''.join([p[0].upper() for p in receita['autor'].split()])
 
@@ -121,7 +126,6 @@ def delete_receita(index):
         flash('Receita não encontrada.', 'error')
 
     return redirect(url_for('admin.dashboard'))
-
 
 # 🔓 Logout
 @admin_bp.route('/admin-logout')

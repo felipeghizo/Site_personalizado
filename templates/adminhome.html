@@ -15,10 +15,10 @@
 
     <main class="container">
         <section class="recipe-list">
-            <button class="add-button">Adicionar receita</button>
+            <a class="add-button" href="{{ url_for('admin.add_receita') }}">Adicionar receita</a>
 
             {% for receita in receitas %}
-            <div class="card" onclick="mostrarDetalhes('{{ loop.index0 }}')">
+            <div class="card">
                 <div class="user-badge">{{ receita.iniciais }}</div>
                 <div class="info">
                     <h3>{{ receita.nome }}</h3>
@@ -26,8 +26,8 @@
                 </div>
                 <img src="{{ receita.imagem }}" alt="{{ receita.nome }}">
                 <div class="actions">
-                    <button class="edit">Editar</button>
-                    <button class="delete">Excluir</button>
+                    <a class="edit" href="{{ url_for('admin.edit_receita', index=loop.index0) }}">Editar</a>
+                    <a class="delete" href="{{ url_for('admin.delete_receita', index=loop.index0) }}" onclick="return confirm('Tem certeza que deseja excluir essa receita?');">Excluir</a>
                 </div>
             </div>
             {% endfor %}

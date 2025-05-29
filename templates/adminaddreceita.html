@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Receita - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Addreceita_style.css') }}">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Adicionar Receita</h1>
+        <form method="POST">
+            <label for="nome">Nome da Receita</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <label for="autor">Autor da Receita</label>
+            <input type="text" name="autor" id="autor" required>
+
+            <label for="ingredientes">Ingredientes</label>
+            <textarea name="ingredientes" id="ingredientes" rows="4" required></textarea>
+
+            <label for="modo_preparo">Modo de Preparo</label>
+            <textarea name="modo_preparo" id="modo_preparo" rows="4" required></textarea>
+
+            <label for="imagem">URL da Imagem</label>
+            <input type="text" name="imagem" id="imagem" placeholder="https://...">
+
+            <div class="buttons">
+                <a href="{{ url_for('admin.dashboard') }}" class="cancel-btn">Cancelar</a>
+                <button type="submit" class="add-btn">Adicionar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
