@@ -26,11 +26,16 @@
         </section>
 
         <section class="recipe-details" id="detalhes-receita">
-            <h2 id="titulo-detalhe">Pato Rústico</h2>
-            <p class="autor">Felipe Ghizoni</p>
-            <p class="descricao">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-            </p>
+            <h2 id="titulo-detalhe">Título</h2>
+            <p class="author">Autor</p>
+            <p class="descricao">Descrição</p>
+
+            <h3>Ingredientes</h3>
+            <p class="ingredientes">Ingredientes da receita</p>
+
+            <h3>Modo de Preparo</h3>
+            <p class="modo-preparo">Passo a passo...</p>
+
             <div class="actions">
                 <button class="btn">Saber mais</button>
                 <button class="btn">Cozinhar</button>
@@ -38,14 +43,27 @@
         </section>
     </main>
 
+    <script id="receitas-json" type="application/json">
+        {{ receitas | tojson }}
+    </script>
+
     <script>
-        const dadosReceitas = JSON.parse(`{{ receitas | tojson | safe }}`);
+        const dadosReceitas = JSON.parse(document.getElementById('receitas-json').textContent);
 
         function mostrarDetalhes(index) {
+            index = Number(index);
             const r = dadosReceitas[index];
+            if (!r) return;
+
             document.getElementById('titulo-detalhe').innerText = r.nome;
-            document.querySelector('.autor').innerText = r.autor;
+            document.querySelector('.recipe-details .author').innerText = r.autor;
             document.querySelector('.descricao').innerText = r.descricao;
+            document.querySelector('.ingredientes').innerText = r.ingredientes.replace(/\r\n/g, ", ");
+            document.querySelector('.modo-preparo').innerText = r.modo_preparo;
+
+            document.querySelectorAll('.card').forEach((card, i) => {
+                card.classList.toggle('selecionado', i === index);
+            });
         }
     </script>
 </body>
