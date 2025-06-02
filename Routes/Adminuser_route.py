@@ -19,7 +19,6 @@ def admin_login():
         password = request.form.get('password')
         if password == ADMIN_PASSWORD:
             session['logado'] = True
-            flash('Login bem-sucedido!', 'success')
             return redirect(url_for('admin.dashboard'))
         else:
             flash('Senha incorreta.', 'error')

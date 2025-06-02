@@ -8,9 +8,14 @@
 <body>
 
     <nav class="category-tabs">
+    <div class="tabs-left">
         <button class="active">Salgados</button>
         <button>Doces</button>
         <button>Drinks</button>
+    </div>
+    <div class="tabs-right">
+        <a class="btn-admin" href="{{ url_for('admin.admin_login') }}">Admin</a>
+    </div>
     </nav>
 
     <main class="container">

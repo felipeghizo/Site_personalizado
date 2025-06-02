@@ -30,10 +30,18 @@ body > * {
 }
 
 nav.category-tabs {
-  display: flex;
-  justify-content: center;
+  position: relative; /* necessário para o botão Admin se posicionar relativamente a este nav */
   background: #333;
   padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centraliza o bloco de botões */
+  align-items: center;
+}
+
+.tabs-center {
+  display: flex;
+  gap: 10px;
 }
 
 .category-tabs button {
@@ -41,13 +49,24 @@ nav.category-tabs {
   border: none;
   color: #fff;
   padding: 10px 20px;
-  margin: 0 10px;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .category-tabs .active {
   background: #999;
+}
+
+.btn-admin {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  background: #c5a4e4;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 main.container {
