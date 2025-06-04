@@ -2,33 +2,55 @@
     {
         "nome": "Felipe de Oliveira Ghizoni",
         "autor": "Anna Santos",
+        "categoria": "Drinks",
         "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
         "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "skdfjçalskdjfçlaskdjfçlaskjdflisdurfgp9ow4eintlgkdsjfgvlsdkjfhgçosegçlsdkjfglçskjedrfg",
+        "descricao": "Drinks",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
     },{
         "nome": "Felipe de Oliveira Ghizoni",
         "autor": "Anna Santos",
+        "categoria": "Salgados",
         "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
         "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "skdfjçalskdjfçlaskdjfçlaskjdflisdurfgp9ow4eintlgkdsjfgvlsdkjfhgçosegçlsdkjfglçskjedrfg",
+        "descricao": "Salgados",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
     },{
         "nome": "Felipe de Oliveira Ghizoni",
         "autor": "Anna Santos",
+        "categoria": "Doces",
         "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
         "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "skdfjçalskdjfçlaskdjfçlaskjdflisdurfgp9ow4eintlgkdsjfgvlsdkjfhgçosegçlsdkjfglçskjedrfg",
+        "descricao": "Doces",
+        "imagem": "/static/img/bacalhau.png",
+        "iniciais": "AS"
+    },    {
+        "nome": "Felasdfasdfipe de Oliveira Ghizoni",
+        "autor": "Anna Santos",
+        "categoria": "Drinks",
+        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
+        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
+        "descricao": "Drinks",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
     },{
-        "nome": "Felipe de Oliveira Ghizoni",
+        "nome": "asdfasdf de Oliveira Ghizoni",
         "autor": "Anna Santos",
+        "categoria": "Salgados",
         "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
         "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "skdfjçalskdjfçlaskdjfçlaskjdflisdurfgp9ow4eintlgkdsjfgvlsdkjfhgçosegçlsdkjfglçskjedrfg",
+        "descricao": "Salgados",
+        "imagem": "/static/img/bacalhau.png",
+        "iniciais": "AS"
+    },{
+        "nome": "asdasd de Oliveira Ghizoni",
+        "autor": "Anna Santos",
+        "categoria": "Doces",
+        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
+        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
+        "descricao": "Doces",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
     }

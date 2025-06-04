@@ -9,9 +9,9 @@
 
     <nav class="category-tabs">
     <div class="tabs-left">
-        <button class="active">Salgados</button>
-        <button>Doces</button>
-        <button>Drinks</button>
+         <button class="active" data-categoria="Salgados">Salgados</button>
+        <button data-categoria="Doces">Doces</button>
+        <button data-categoria="Drinks">Drinks</button>
     </div>
     <div class="tabs-right">
         <a class="btn-admin" href="{{ url_for('admin.admin_login') }}">Admin</a>
@@ -21,12 +21,12 @@
     <main class="container">
         <section class="recipe-list">
             {% for receita in receitas %}
-            <div class="card" onclick="mostrarDetalhes('{{ loop.index0 }}')">
-                <div class="user-badge">{{ receita.iniciais }}</div>
-                <div class="title">{{ receita.nome }}</div>
-                <div class="author">{{ receita.autor }}</div>
-                <img src="{{ receita.imagem }}" alt="{{ receita.nome }}">
-            </div>
+                <div class="card">
+                    <div class="user-badge">{{ receita.iniciais }}</div>
+                    <div class="title">{{ receita.nome }}</div>
+                    <div class="author">{{ receita.autor }}</div>
+                    <img src="{{ receita.imagem }}" alt="{{ receita.nome }}">
+                </div>
             {% endfor %}
         </section>
 
@@ -42,8 +42,8 @@
             <p class="modo-preparo">Passo a passo...</p>
 
             <div class="actions">
-                <button class="btn">Saber mais</button>
-                <button class="btn">Cozinhar</button>
+                <a class="btn" href="https://panelinha.com.br/receita/arroz-branco-para-4" target="_blank" >Saber mais</a>
+                <a class="btn" href="https://www.youtube.com/watch?v=cTQnHjWSNzM" target="_blank">Cozinhar</a>
             </div>
         </section>
     </main>
@@ -54,22 +54,79 @@
 
     <script>
         const dadosReceitas = JSON.parse(document.getElementById('receitas-json').textContent);
+        const listaContainer = document.querySelector('.recipe-list');
 
-        function mostrarDetalhes(index) {
-            index = Number(index);
-            const r = dadosReceitas[index];
-            if (!r) return;
+        const detalheTitulo = document.getElementById('titulo-detalhe');
+        const detalheAutor = document.querySelector('.recipe-details .author');
+        const detalheDescricao = document.querySelector('.descricao');
+        const botoesDetalhes = document.querySelectorAll(".recipe-details .btn");
+        const detalheIngredientes = document.querySelector('.ingredientes');
+        const detalheModoPreparo = document.querySelector('.modo-preparo');
 
-            document.getElementById('titulo-detalhe').innerText = r.nome;
-            document.querySelector('.recipe-details .author').innerText = r.autor;
-            document.querySelector('.descricao').innerText = r.descricao;
-            document.querySelector('.ingredientes').innerText = r.ingredientes.replace(/\r\n/g, ", ");
-            document.querySelector('.modo-preparo').innerText = r.modo_preparo;
+        const botoesCategoria = document.querySelectorAll('.category-tabs button');
+        let categoriaAtual = 'Salgados';
 
-            document.querySelectorAll('.card').forEach((card, i) => {
-                card.classList.toggle('selecionado', i === index);
-            });
+        function mostrarDetalhes(receita) {
+            if (!receita) return;
+
+            detalheTitulo.innerText = receita.nome;
+            detalheAutor.innerText = receita.autor;
+            detalheDescricao.innerText = receita.descricao;
+            detalheIngredientes.innerText = receita.ingredientes?.replace(/\r\n/g, ", ") || 'N/A';
+            detalheModoPreparo.innerText = receita.modo_preparo || 'N/A';
+            botoesDetalhes.forEach(btn => btn.style.display = "inline-block");
         }
+
+        function renderizarReceitas(categoria) {
+            listaContainer.innerHTML = '';
+
+            const receitasFiltradas = dadosReceitas.filter(r => r.categoria === categoria);
+
+            receitasFiltradas.forEach((receita) => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+
+                card.onclick = () => {
+                    // Remove seleção de outros cards
+                    document.querySelectorAll('.card').forEach(c => c.classList.remove('selecionado'));
+                    card.classList.add('selecionado');
+
+                    mostrarDetalhes(receita);
+                };
+
+                card.innerHTML = `
+                    <div class="user-badge">${receita.iniciais}</div>
+                    <div class="title">${receita.nome}</div>
+                    <div class="author">${receita.autor}</div>
+                    <img src="${receita.imagem}" alt="${receita.nome}">
+                `;
+
+                listaContainer.appendChild(card);
+            });
+
+            // ⚠️ Removido: nenhuma receita selecionada inicialmente
+            detalheTitulo.innerText = '';
+            detalheAutor.innerText = '';
+            detalheDescricao.innerText = 'Selecione uma receita para ver os detalhes.';
+            detalheIngredientes.innerText = '';
+            detalheModoPreparo.innerText = '';
+            botoesDetalhes.forEach(btn => btn.style.display = "none");
+        }
+
+        botoesCategoria.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoriaAtual = btn.dataset.categoria;
+
+                botoesCategoria.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                renderizarReceitas(categoriaAtual);
+            });
+        });
+
+        // Inicialização
+        renderizarReceitas(categoriaAtual);
     </script>
+
 </body>
 </html>

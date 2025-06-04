@@ -148,7 +148,9 @@ main.container {
 }
 
 .recipe-details .btn {
+  display: inline;
   background: #c5a4e4;
+  text-decoration: none;
   border: none;
   padding: 10px 15px;
   border-radius: 8px;
