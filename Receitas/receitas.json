@@ -10,39 +10,9 @@
         "iniciais": "T"
     },
     {
-        "nome": "Felipe de Oliveira Ghizoni",
-        "autor": "Anna Santos",
-        "categoria": "Salgados",
-        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
-        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "Salgados",
-        "imagem": "/static/img/bacalhau.png",
-        "iniciais": "AS"
-    },
-    {
-        "nome": "Felipe de Oliveira Ghizoni",
-        "autor": "Anna Santos",
-        "categoria": "Drinks",
-        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
-        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "Doces",
-        "imagem": "/static/img/bacalhau.png",
-        "iniciais": "AS"
-    },
-    {
-        "nome": "Felasdfasdfipe de Oliveira Ghizoni",
-        "autor": "Anna Santos",
-        "categoria": "Drinks",
-        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
-        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "Drinks",
-        "imagem": "/static/img/bacalhau.png",
-        "iniciais": "AS"
-    },
-    {
         "nome": "asdfasdf de Oliveira Ghizoni",
         "autor": "Anna Santos",
-        "categoria": "Salgados",
+        "categoria": "Drinks",
         "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
         "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
         "descricao": "Salgados",
@@ -52,7 +22,7 @@
     {
         "nome": "asdasd de Oliveira Ghizoni",
         "autor": "Anna Santos",
-        "categoria": "Doces",
+        "categoria": "Salgados",
         "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
         "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
         "descricao": "Doces",
@@ -74,15 +44,5 @@
         "modo_preparo": "julia",
         "imagem": "",
         "iniciais": "J"
-    },
-    {
-        "nome": "dpasio",
-        "autor": "dpasio",
-        "ingredientes": "dpasio",
-        "modo_preparo": "dpasio",
-        "imagem": "",
-        "categoria": "Doces",
-        "descricao": "",
-        "iniciais": "D"
     }
 ]

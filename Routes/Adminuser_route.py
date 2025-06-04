@@ -34,6 +34,9 @@ def dashboard():
     with open(CAMINHO_JSON, 'r', encoding='utf-8') as f:
         receitas = json.load(f)
 
+    for i, receita in enumerate(receitas):
+        receita['index'] = i  # ✅ Adiciona índice real
+
     return render_template('adminhome.html', receitas=receitas)
 
 
@@ -116,7 +119,7 @@ def delete_receita(index):
         receitas = json.load(f)
 
     if index < len(receitas):
-        receitas.pop(index)
+        del receitas[index]
         with open(CAMINHO_JSON, 'w', encoding='utf-8') as f:
             json.dump(receitas, f, indent=4, ensure_ascii=False)
         flash('Receita excluída com sucesso!', 'success')
