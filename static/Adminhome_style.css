@@ -34,17 +34,25 @@ main{
 }
 
 nav.category-tabs {
-  position: relative; /* necessário para o botão Admin se posicionar relativamente a este nav */
+  display: flex;
+  justify-content: space-between; /* separa esquerda, centro e direita */
+  align-items: center;
   background: #333;
   padding: 10px;
   width: 100%;
+}
+
+.tabs-left,
+.tabs-right {
+  flex: 1;
   display: flex;
-  justify-content: center; /* centraliza o bloco de botões */
   align-items: center;
 }
 
 .tabs-center {
+  flex: 2;
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 

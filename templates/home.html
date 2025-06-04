@@ -6,15 +6,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
 </head>
 <body>
+
     <nav class="category-tabs">
-    <div class="tabs-left">
-         <button class="active" data-categoria="Salgados">Salgados</button>
-        <button data-categoria="Doces">Doces</button>
-        <button data-categoria="Drinks">Drinks</button>
-    </div>
-    <div class="tabs-right">
-        <a class="btn-admin" href="{{ url_for('admin.admin_login') }}">Admin</a>
-    </div>
+        <div class="tabs-left">
+            <img src="../static/img/icone.png" style="width: 40px;">
+        </div>
+        <div class="tabs-center">
+            <button class="active" data-categoria="Salgados">Salgados</button>
+            <button data-categoria="Doces">Doces</button>
+            <button data-categoria="Drinks">Drinks</button>
+        </div>
+        <div class="tabs-right">
+            <a class="btn-admin" href="{{ url_for('admin.admin_login') }}">Admin</a>
+        </div>
     </nav>
 
     <main class="container">
