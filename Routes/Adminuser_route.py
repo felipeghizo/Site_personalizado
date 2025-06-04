@@ -47,6 +47,7 @@ def add_receita():
         nome = request.form.get('nome')
         autor = request.form.get('autor')
         ingredientes = request.form.get('ingredientes')
+        categoria = request.form.get('categoria')
         modo_preparo = request.form.get('modo_preparo')
         imagem = request.form.get('imagem')
 
@@ -59,6 +60,8 @@ def add_receita():
             'ingredientes': ingredientes,
             'modo_preparo': modo_preparo,
             'imagem': imagem,
+            'categoria': categoria,  # <-- Adicione isso
+            'descricao': '',         # <-- Opcional: pode pedir ao usuário também
             'iniciais': ''.join([palavra[0].upper() for palavra in autor.split()])
         }
 
@@ -66,8 +69,6 @@ def add_receita():
 
         with open(CAMINHO_JSON, 'w', encoding='utf-8') as f:
             json.dump(receitas, f, indent=4, ensure_ascii=False)
-
-        flash('Receita adicionada com sucesso!', 'success')
         return redirect(url_for('admin.dashboard'))
 
     return render_template('adminaddreceita.html')
@@ -91,6 +92,7 @@ def edit_receita(index):
         receita['nome'] = request.form.get('nome')
         receita['autor'] = request.form.get('autor')
         receita['descricao'] = request.form.get('descricao')
+        receita['categoria'] = request.form.get('categoria')
         ingredientes = request.form.get('ingredientes')
         modo_preparo = request.form.get('modo_preparo')
         receita['ingredientes'] = ingredientes
@@ -100,12 +102,9 @@ def edit_receita(index):
 
         with open(CAMINHO_JSON, 'w', encoding='utf-8') as f:
             json.dump(receitas, f, indent=4, ensure_ascii=False)
-
-        flash('Receita editada com sucesso!', 'success')
         return redirect(url_for('admin.dashboard'))
 
     return render_template('admineditreceita.html', receita=receita, index=index)
-
 
 # ❌ Excluir receita
 @admin_bp.route('/admin-deletereceita/<int:index>')

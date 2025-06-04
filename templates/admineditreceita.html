@@ -2,44 +2,46 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Editar Receita</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='Editreceita_style.css') }}">
+    <title>Editar Receita - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Addreceita_style.css') }}">
 </head>
 <body>
-    <h1>Editar Receita</h1>
 
-    <form action="{{ url_for('admin.edit_receita', index=index) }}" method="POST">
-        <label>Nome:</label><br>
-        <input type="text" name="nome" value="{{ receita.nome }}"><br><br>
+    <div class="form-container">
+        <h1>Editar Receita</h1>
+        <form method="POST" action="{{ url_for('admin.edit_receita', index=index) }}">
+            <label for="nome">Nome da Receita</label>
+            <input type="text" name="nome" id="nome" value="{{ receita.nome }}" required>
 
-        <label>Autor:</label><br>
-        <input type="text" name="autor" value="{{ receita.autor }}"><br><br>
+            <label for="autor">Autor da Receita</label>
+            <input type="text" name="autor" id="autor" value="{{ receita.autor }}" required>
 
-        <label>Ingredientes:</label><br>
-        <textarea name="ingredientes">{{ receita.ingredientes }}</textarea><br><br>
+            <label for="categoria">Categoria</label>
+            <select name="categoria" id="categoria" required>
+                <option value="">Selecione...</option>
+                <option value="Salgados" {% if receita.categoria == 'Salgados' %}selected{% endif %}>Salgados</option>
+                <option value="Doces" {% if receita.categoria == 'Doces' %}selected{% endif %}>Doces</option>
+                <option value="Drinks" {% if receita.categoria == 'Drinks' %}selected{% endif %}>Drinks</option>
+            </select>
 
-        <label>Modo de Preparo:</label><br>
-        <textarea name="modo_preparo">{{ receita.modo_preparo }}</textarea><br><br>
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="descricao" rows="3" required>{{ receita.descricao }}</textarea>
 
-        <label>Imagem (URL):</label><br>
-        <input type="text" name="imagem" value="{{ receita.imagem }}"><br><br>
+            <label for="ingredientes">Ingredientes</label>
+            <textarea name="ingredientes" id="ingredientes" rows="4" required>{{ receita.ingredientes }}</textarea>
 
-        <button type="submit">Salvar Alterações</button>
-    </form>
+            <label for="modo_preparo">Modo de Preparo</label>
+            <textarea name="modo_preparo" id="modo_preparo" rows="4" required>{{ receita.modo_preparo }}</textarea>
 
-    <a href="{{ url_for('admin.dashboard') }}">Voltar</a>
+            <label for="imagem">URL da Imagem</label>
+            <input type="text" name="imagem" id="imagem" value="{{ receita.imagem }}">
 
-    <script>
-        // Mensagens de feedback simples (pode ser ampliado conforme necessidade)
-        document.addEventListener('DOMContentLoaded', () => {
-            const messages = document.querySelectorAll('.flash-message');
-            messages.forEach(msg => {
-                setTimeout(() => {
-                    msg.style.display = 'none';
-                }, 3000);
-            });
-        });
+            <div class="buttons">
+                <a href="{{ url_for('admin.dashboard') }}" class="cancel-btn">Cancelar</a>
+                <button type="submit" class="add-btn">Salvar</button>
+            </div>
+        </form>
+    </div>
 
-    </script>
 </body>
 </html>

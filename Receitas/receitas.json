@@ -1,14 +1,15 @@
 [
     {
-        "nome": "Felipe de Oliveira Ghizoni",
-        "autor": "Anna Santos",
-        "categoria": "Drinks",
-        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
-        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "Drinks",
+        "nome": "tenis",
+        "autor": "tenis",
+        "categoria": "Salgados",
+        "ingredientes": "tenis",
+        "modo_preparo": "tenis",
+        "descricao": "tenis",
         "imagem": "/static/img/bacalhau.png",
-        "iniciais": "AS"
-    },{
+        "iniciais": "T"
+    },
+    {
         "nome": "Felipe de Oliveira Ghizoni",
         "autor": "Anna Santos",
         "categoria": "Salgados",
@@ -17,16 +18,18 @@
         "descricao": "Salgados",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
-    },{
+    },
+    {
         "nome": "Felipe de Oliveira Ghizoni",
         "autor": "Anna Santos",
-        "categoria": "Doces",
+        "categoria": "Drinks",
         "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
         "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
         "descricao": "Doces",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
-    },    {
+    },
+    {
         "nome": "Felasdfasdfipe de Oliveira Ghizoni",
         "autor": "Anna Santos",
         "categoria": "Drinks",
@@ -35,7 +38,8 @@
         "descricao": "Drinks",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
-    },{
+    },
+    {
         "nome": "asdfasdf de Oliveira Ghizoni",
         "autor": "Anna Santos",
         "categoria": "Salgados",
@@ -44,7 +48,8 @@
         "descricao": "Salgados",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
-    },{
+    },
+    {
         "nome": "asdasd de Oliveira Ghizoni",
         "autor": "Anna Santos",
         "categoria": "Doces",
@@ -53,5 +58,31 @@
         "descricao": "Doces",
         "imagem": "/static/img/bacalhau.png",
         "iniciais": "AS"
+    },
+    {
+        "nome": "teste",
+        "autor": "\tteste123",
+        "ingredientes": "asdasd",
+        "modo_preparo": "asdasd",
+        "imagem": "",
+        "iniciais": "T"
+    },
+    {
+        "nome": "julia",
+        "autor": "julia",
+        "ingredientes": "julia",
+        "modo_preparo": "julia",
+        "imagem": "",
+        "iniciais": "J"
+    },
+    {
+        "nome": "dpasio",
+        "autor": "dpasio",
+        "ingredientes": "dpasio",
+        "modo_preparo": "dpasio",
+        "imagem": "",
+        "categoria": "Doces",
+        "descricao": "",
+        "iniciais": "D"
     }
 ]

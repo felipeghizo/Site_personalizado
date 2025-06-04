@@ -45,6 +45,18 @@ textarea {
     resize: vertical;
 }
 
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
 .buttons {
     display: flex;
     justify-content: space-between;

@@ -52,18 +52,27 @@
     <script>
         const dadosReceitas = JSON.parse(document.getElementById('receitas-json').textContent);
         const listaContainer = document.querySelector('.recipe-list');
+
         const detalheTitulo = document.getElementById('titulo-detalhe');
-        const detalheAutor = document.querySelector('.recipe-details .autor');
+        const detalheAutor = document.querySelector('.recipe-details .author');
         const detalheDescricao = document.querySelector('.descricao');
         const botoesDetalhes = document.querySelectorAll(".recipe-details .btn");
+        const detalheIngredientes = document.querySelector('.ingredientes');
+        const detalheModoPreparo = document.querySelector('.modo-preparo');
+
+        const editReceitaBaseURL = "{{ url_for('admin.edit_receita', index=0).rsplit('/', 1)[0] }}";
+
         const botoesCategoria = document.querySelectorAll('.category-tabs button');
         let categoriaAtual = 'Salgados';
 
         function mostrarDetalhes(receita) {
             if (!receita) return;
+
             detalheTitulo.innerText = receita.nome;
             detalheAutor.innerText = receita.autor;
             detalheDescricao.innerText = receita.descricao;
+            detalheIngredientes.innerText = receita.ingredientes?.replace(/\r\n/g, ", ") || 'N/A';
+            detalheModoPreparo.innerText = receita.modo_preparo || 'N/A';
             botoesDetalhes.forEach(btn => btn.style.display = "inline-block");
         }
 
@@ -92,8 +101,8 @@
                     </div>
                     <img src="${receita.imagem}" alt="${receita.nome}">
                     <div class="actions">
-                        <a class="edit" href="/admin/edit/${index}">Editar</a>
-                        <a class="delete" href="/admin/delete/${index}" onclick="return confirm('Tem certeza que deseja excluir essa receita?');">Excluir</a>
+                        <a class="edit" href="${editReceitaBaseURL}/${index}">Editar</a>
+                        <a class="delete" href="/delete_receita/${index}" onclick="return confirm('Tem certeza que deseja excluir essa receita?');">Excluir</a>
                     </div>
                 `;
 

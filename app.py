@@ -3,6 +3,8 @@ from Routes.Home_route import home_bp
 from Routes.Adminuser_route import admin_bp 
 
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Desativa cache para arquivos estáticos
 app.secret_key = 'chave_secreta_segura'
 
 # Registrando os blueprints com prefixos
