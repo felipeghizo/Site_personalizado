@@ -3,58 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin - Gourmet Receitas</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='Adminhome_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='adminHome_style.css') }}">
 </head>
 <body>
 
     <nav class="category-tabs">
-        <button class="active">Salgados</button>
-        <button>Doces</button>
-        <button>Drinks</button>
+    <div class="tabs-left">
+         <button class="active" data-categoria="Salgados">Salgados</button>
+        <button data-categoria="Doces">Doces</button>
+        <button data-categoria="Drinks">Drinks</button>
+    </div>
+    <div class="tabs-right">
+        <a class="btn-admin" href="{{ url_for('home.home') }}">Home</a>
+    </div>
     </nav>
 
     <main class="container">
         <section class="recipe-list">
             <a class="add-button" href="{{ url_for('admin.add_receita') }}">Adicionar receita</a>
-
-            {% for receita in receitas %}
-            <div class="card">
-                <div class="user-badge">{{ receita.iniciais }}</div>
-                <div class="info">
-                    <h3>{{ receita.nome }}</h3>
-                    <p>{{ receita.autor }}</p>
-                </div>
-                <img src="{{ receita.imagem }}" alt="{{ receita.nome }}">
-                <div class="actions">
-                    <a class="edit" href="{{ url_for('admin.edit_receita', index=loop.index0) }}">Editar</a>
-                    <a class="delete" href="{{ url_for('admin.delete_receita', index=loop.index0) }}" onclick="return confirm('Tem certeza que deseja excluir essa receita?');">Excluir</a>
-                </div>
-            </div>
-            {% endfor %}
+            <!-- Cards serão renderizados dinamicamente via JavaScript -->
         </section>
 
         <section class="recipe-details" id="detalhes-receita">
-            <h2 id="titulo-detalhe">Pato Rústico</h2>
-            <p class="autor">Felipe Ghizoni</p>
-            <p class="descricao">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-            </p>
+            <h2 id="titulo-detalhe">Título</h2>
+            <p class="author">Autor</p>
+            <p class="descricao">Descrição</p>
+
+            <h3>Ingredientes</h3>
+            <p class="ingredientes">Ingredientes da receita</p>
+
+            <h3>Modo de Preparo</h3>
+            <p class="modo-preparo">Passo a passo...</p>
+
             <div class="actions">
-                <button class="btn">Saber mais</button>
-                <button class="btn">Cozinhar</button>
+                <a class="btn" href="https://panelinha.com.br/receita/arroz-branco-para-4" target="_blank" >Saber mais</a>
+                <a class="btn" href="https://www.youtube.com/watch?v=cTQnHjWSNzM" target="_blank">Cozinhar</a>
             </div>
         </section>
     </main>
 
-    <script>
-        const dadosReceitas = JSON.parse(`{{ receitas | tojson | safe }}`);
-
-        function mostrarDetalhes(index) {
-            const r = dadosReceitas[index];
-            document.getElementById('titulo-detalhe').innerText = r.nome;
-            document.querySelector('.recipe-details .autor').innerText = r.autor;
-            document.querySelector('.recipe-details .descricao').innerText = r.descricao;
-        }
+    <script id="receitas-json" type="application/json">
+        {{ receitas | tojson }}
     </script>
+
+    <script>
+        const dadosReceitas = JSON.parse(document.getElementById('receitas-json').textContent);
+        const listaContainer = document.querySelector('.recipe-list');
+        const detalheTitulo = document.getElementById('titulo-detalhe');
+        const detalheAutor = document.querySelector('.recipe-details .autor');
+        const detalheDescricao = document.querySelector('.descricao');
+        const botoesDetalhes = document.querySelectorAll(".recipe-details .btn");
+        const botoesCategoria = document.querySelectorAll('.category-tabs button');
+        let categoriaAtual = 'Salgados';
+
+        function mostrarDetalhes(receita) {
+            if (!receita) return;
+            detalheTitulo.innerText = receita.nome;
+            detalheAutor.innerText = receita.autor;
+            detalheDescricao.innerText = receita.descricao;
+            botoesDetalhes.forEach(btn => btn.style.display = "inline-block");
+        }
+
+        function renderizarReceitas(categoria) {
+            listaContainer.innerHTML = `
+                <a class="add-button" href="{{ url_for('admin.add_receita') }}">Adicionar receita</a>
+            `;
+
+            const receitasFiltradas = dadosReceitas.filter(r => r.categoria === categoria);
+
+            receitasFiltradas.forEach((receita, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+
+                card.onclick = () => {
+                    document.querySelectorAll('.card').forEach(c => c.classList.remove('selecionado'));
+                    card.classList.add('selecionado');
+                    mostrarDetalhes(receita);
+                };
+
+                card.innerHTML = `
+                    <div class="user-badge">${receita.iniciais}</div>
+                    <div class="info">
+                        <h3>${receita.nome}</h3>
+                        <p>${receita.autor}</p>
+                    </div>
+                    <img src="${receita.imagem}" alt="${receita.nome}">
+                    <div class="actions">
+                        <a class="edit" href="/admin/edit/${index}">Editar</a>
+                        <a class="delete" href="/admin/delete/${index}" onclick="return confirm('Tem certeza que deseja excluir essa receita?');">Excluir</a>
+                    </div>
+                `;
+
+                listaContainer.appendChild(card);
+            });
+
+            detalheTitulo.innerText = '';
+            detalheAutor.innerText = '';
+            detalheDescricao.innerText = 'Selecione uma receita para ver os detalhes.';
+            botoesDetalhes.forEach(btn => btn.style.display = "none");
+        }
+
+        botoesCategoria.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoriaAtual = btn.dataset.categoria;
+                botoesCategoria.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderizarReceitas(categoriaAtual);
+            });
+        });
+
+        renderizarReceitas(categoriaAtual);
+    </script>
+
 </body>
 </html>
