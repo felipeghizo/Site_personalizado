@@ -101,7 +101,7 @@
                     <div class="user-badge">${receita.iniciais}</div>
                     <div class="title">${receita.nome}</div>
                     <div class="author">${receita.autor}</div>
-                    <img src="${receita.imagem}" alt="${receita.nome}">
+                    <img src="{{ url_for('static', filename='') }}${receita.imagem}" alt="${receita.nome}">
                 `;
 
                 listaContainer.appendChild(card);

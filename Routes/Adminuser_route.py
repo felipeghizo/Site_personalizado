@@ -1,4 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
+from werkzeug.utils import secure_filename
+from PIL import Image
+from io import BytesIO
 import json
 import os
 
@@ -52,7 +55,22 @@ def add_receita():
         ingredientes = request.form.get('ingredientes')
         categoria = request.form.get('categoria')
         modo_preparo = request.form.get('modo_preparo')
-        imagem = request.form.get('imagem')
+        imagem_file = request.files.get('imagem')
+
+        imagem_path = ''
+        if imagem_file and imagem_file.filename != '':
+            print("ok")
+            # Gera nome de arquivo sem extensão
+            nome_base = secure_filename(os.path.splitext(imagem_file.filename)[0])
+            filename = f"{nome_base}.png"
+            imagem_path = f'img/{filename}'
+
+            # Caminho completo para salvar
+            save_path = os.path.join('static', 'img', filename)
+
+            # Abrir e converter imagem
+            img = Image.open(imagem_file.stream).convert('RGB')  # ou 'RGBA' se quiser transparência
+            img.save(save_path, 'PNG')
 
         with open(CAMINHO_JSON, 'r', encoding='utf-8') as f:
             receitas = json.load(f)
@@ -62,9 +80,9 @@ def add_receita():
             'autor': autor,
             'ingredientes': ingredientes,
             'modo_preparo': modo_preparo,
-            'imagem': imagem,
-            'categoria': categoria,  # <-- Adicione isso
-            'descricao': '',         # <-- Opcional: pode pedir ao usuário também
+            'imagem': imagem_path,
+            'categoria': categoria,
+            'descricao': '',
             'iniciais': ''.join([palavra[0].upper() for palavra in autor.split()])
         }
 
@@ -122,7 +140,6 @@ def delete_receita(index):
         del receitas[index]
         with open(CAMINHO_JSON, 'w', encoding='utf-8') as f:
             json.dump(receitas, f, indent=4, ensure_ascii=False)
-        flash('Receita excluída com sucesso!', 'success')
     else:
         flash('Receita não encontrada.', 'error')
 
@@ -132,5 +149,4 @@ def delete_receita(index):
 @admin_bp.route('/admin-logout')
 def logout():
     session.pop('logado', None)
-    flash('Logout realizado com sucesso.', 'info')
     return redirect(url_for('admin.admin_login'))

@@ -1,35 +1,5 @@
 [
     {
-        "nome": "tenis",
-        "autor": "tenis",
-        "categoria": "Salgados",
-        "ingredientes": "tenis",
-        "modo_preparo": "tenis",
-        "descricao": "tenis",
-        "imagem": "/static/img/bacalhau.png",
-        "iniciais": "T"
-    },
-    {
-        "nome": "asdfasdf de Oliveira Ghizoni",
-        "autor": "Anna Santos",
-        "categoria": "Drinks",
-        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
-        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "Salgados",
-        "imagem": "/static/img/bacalhau.png",
-        "iniciais": "AS"
-    },
-    {
-        "nome": "asdasd de Oliveira Ghizoni",
-        "autor": "Anna Santos",
-        "categoria": "Salgados",
-        "ingredientes": "sadfasdfasdfadf\r\nsdfasdf\r\nasdfasdf\r\nasdfasdf\r\nasdfasdf",
-        "modo_preparo": "sdkfja;sdlfkgjsa;dlfkgj;sldkfjg;lsdkfjg;lsdkjfg;sldfg;lkj4er;'toiad;fkgnvsd;alrfikgj;admlfv'psdog;aekjrn'dsaofg;askdfjgá;lsdf'pwo4e'kjadfg",
-        "descricao": "Doces",
-        "imagem": "/static/img/bacalhau.png",
-        "iniciais": "AS"
-    },
-    {
         "nome": "teste",
         "autor": "\tteste123",
         "ingredientes": "asdasd",
@@ -44,5 +14,25 @@
         "modo_preparo": "julia",
         "imagem": "",
         "iniciais": "J"
+    },
+    {
+        "nome": "asdf",
+        "autor": "asdf",
+        "ingredientes": "asdf",
+        "modo_preparo": "asdf",
+        "imagem": "img/arroz.png",
+        "categoria": "Salgados",
+        "descricao": "",
+        "iniciais": "A"
+    },
+    {
+        "nome": "asdf",
+        "autor": "asdf",
+        "ingredientes": "asdf",
+        "modo_preparo": "asdf",
+        "imagem": "img/background.png",
+        "categoria": "Doces",
+        "descricao": "asdasdasdasd",
+        "iniciais": "A"
     }
 ]

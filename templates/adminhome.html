@@ -100,7 +100,7 @@
                         <h3>${receita.nome}</h3>
                         <p>${receita.autor}</p>
                     </div>
-                    <img src="${receita.imagem}" alt="${receita.nome}">
+                    <img src="{{ url_for('static', filename='') }}${receita.imagem}" alt="${receita.nome}">
                     <div class="actions">
                         <a class="edit" href="${editReceitaBaseURL}/${receita.index}">Editar</a>
                         <a class="delete" href="${deleteReceitaBaseURL}/${receita.index}" onclick="return confirm('Tem certeza que deseja excluir essa receita?');">Excluir</a>
