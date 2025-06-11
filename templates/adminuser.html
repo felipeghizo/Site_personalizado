@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,4 +52,16 @@
 </div>
 
 </body>
+
+<script>
+  // Obtém o elemento com a classe "forgot-password"
+  const senha = document.querySelector(".forgot-password");
+
+  // Verifica se o elemento existe antes de adicionar o evento
+  if (senha) {
+    senha.onclick = function () {
+      alert("Senha enviada para o admin master! Aguarde...");
+    };
+  }
+</script>
 </html>

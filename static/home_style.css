@@ -102,6 +102,7 @@ main.container {
   cursor: pointer;
   transition: transform 0.2s, outline 0.2s;
   outline: 3px solid transparent; /* reserva espaço visual se quiser */
+  max-height: 300px;
 }
 
 .card:hover {

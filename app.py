@@ -2,10 +2,11 @@ from flask import Flask, redirect, url_for
 from Routes.Home_route import home_bp
 from Routes.Adminuser_route import admin_bp 
 
-app = Flask(__name__)
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Desativa cache para arquivos estáticos
-app.secret_key = 'chave_secreta_segura'
+app = Flask(__name__)                       # Cria uma instância da aplicação Flask. 
+app.config['TEMPLATES_AUTO_RELOAD'] = True  # Faz com que o Flask recarregue automaticamente os templates HTML sempre que forem modificados.
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0 # Desativa o cache para arquivos estáticos (como CSS, JS e imagens).
+app.secret_key = 'chave_secreta_segura'     # Define uma chave secreta usada para criptografar dados de sessão e proteger contra ataques.
+
 
 # Registrando os blueprints com prefixos
 app.register_blueprint(home_bp, url_prefix='/home')
