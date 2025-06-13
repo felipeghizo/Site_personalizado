@@ -1,38 +1,22 @@
 [
     {
-        "nome": "teste",
-        "autor": "\tteste123",
-        "ingredientes": "asdasd",
-        "modo_preparo": "asdasd",
-        "imagem": "",
-        "iniciais": "T"
-    },
-    {
-        "nome": "julia",
-        "autor": "julia",
-        "ingredientes": "julia",
-        "modo_preparo": "julia",
-        "imagem": "",
-        "iniciais": "J"
-    },
-    {
-        "nome": "asdf",
-        "autor": "asdf",
-        "ingredientes": "asdf",
-        "modo_preparo": "asdf",
+        "nome": "Arroz branco soltinho",
+        "autor": "Anna Santos",
+        "ingredientes": "Arroz - 2 xícaras\r\nÁgua - 2 Litros\r\nSal - a gosto",
+        "modo_preparo": "Para fazer um arroz soltinho, comece lavando bem o arroz até a água ficar clara, retirando o excesso de amido. Em uma panela, aqueça um fio de óleo ou azeite e refogue alho picado (e cebola, se preferir) até dourar. Adicione o arroz escorrido e mexa por alguns minutos para selar os grãos. Acrescente água quente na proporção de duas partes de água para uma de arroz. Tempere com sal a gosto. Cozinhe em fogo médio até a água secar quase totalmente. Abaixe o fogo, tampe a panela e deixe terminar o cozimento no vapor por mais alguns minutos. Desligue o fogo e solte os grãos com um garfo antes de servir.",
         "imagem": "img/arroz.png",
         "categoria": "Salgados",
-        "descricao": "dfajsdçlfkjaçsldkfjçlaskdjflçaksdjfçlaksdjfçlaksdjfçlaksdjfçlakjdsfçlaksjdfçlaksdjfçlaskdjfçlaksdjfçlaksjdgfkçlsjdfhglksjdfnvblksdjglskejnfvdfajsdçlfkjaçsldkfjçlaskdjflçaksdjfçlaksdjfçlaksdjfçlaksdjfçlakjdsfçlaksjdfçlaksdjfçlaskdjfçlaksdjfçlaksjdgfkçlsjdfhglksjdfnvblksdjglskejnfvlisehrgnlkqejrngpaçdsjnfçqawlkejdfpiqeourghkçsdjfnvçldaskfjglksdjfngçksdjnfglweku4rthpawçdiofmçaslkjdgnpwseiortgjq´3ikmf~çASLKDFJVPEOAIRGHJÇQEKJNFÃSLKDJGÇSDOJFHGNÇWLEKRFM´PAS9DUG94dfajsdçlfkjaçsldkfjçlaskdjflçaksdjfçlaksdjfçlaksdjfçlaksdjfçlakjdsfçlaksjdfçlaksdjfçlaskdjfçlaksdjfçlaksjdgfkçlsjdfhglksjdfnvblksdjglskejnfvlisehrgnlkqejrngpaçdsjnfçqawlkejdfpiqeourghkçsdjfnvçldaskfjglksdjfngçksdjnfglweku4rthpawçdiofmçaslkjdgnpwseiortgjq´3ikmf~çASLKDFJVPEOAIRGHJÇQEKJNFÃSLKDJGÇSDOJFHGNÇWLEKRFM´PAS9DUG94dfajsdçlfkjaçsldkfjçlaskdjflçaksdjfçlaksdjfçlaksdjfçlaksdjfçlakjdsfçlaksjdfçlaksdjfçlaskdjfçlaksdjfçlaksjdgfkçlsjdfhglksjdfnvblksdjglskejnfvlisehrgnlkqejrngpaçdsjnfçqawlkejdfpiqeourghkçsdjfnvçldaskfjglksdjfngçksdjnfglweku4rthpawçdiofmçaslkjdgnpwseiortgjq´3ikmf~çASLKDFJVPEOAIRGHJÇQEKJNFÃSLKDJGÇSDOJFHGNÇWLEKRFM´PAS9DUG94lisehrgnlkqejrngpaçdsjnfçqawlkejdfpiqeourghkçsdjfnvçldaskfjglksdjfngçksdjnfglweku4rthpawçdiofmçaslkjdgnpwseiortgjq´3ikmf~çASLKDFJVPEOAIRGHJÇQEKJNFÃSLKDJGÇSDOJFHGNÇWLEKRFM´PAS9DUG94",
-        "iniciais": "A"
+        "descricao": "",
+        "iniciais": "AS"
     },
     {
-        "nome": "asdf",
-        "autor": "asdf",
-        "ingredientes": "asdf",
-        "modo_preparo": "asdf",
-        "imagem": "img/background.png",
-        "categoria": "Doces",
-        "descricao": "asdasdasdasd",
-        "iniciais": "A"
+        "nome": "Feijão preto",
+        "autor": "Felipe Ghizoni",
+        "ingredientes": "2 xícaras de feijão preto\r\n1 folha de louro\r\n100g de bacon em cubos\r\n1 gomo de linguiça calabresa em rodelas\r\n1 cebola picada\r\n2 dentes de alho picados",
+        "modo_preparo": "Lave o feijão e coloque na panela de pressão com água e o louro; cozinhe por 25 minutos após pegar pressão.\r\nEm outra panela, frite o bacon e a calabresa até dourarem.\r\nAdicione a cebola e o alho e refogue até murcharem.\r\nJunte o feijão cozido (com caldo), tempere com sal e pimenta.\r\nCozinhe por mais 10 minutos em fogo baixo para apurar o sabor.",
+        "imagem": "img/feijao.png",
+        "categoria": "Salgados",
+        "descricao": "Feijão preto tradicional",
+        "iniciais": "FG"
     }
 ]
