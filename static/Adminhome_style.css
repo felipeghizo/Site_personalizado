@@ -32,7 +32,12 @@ main{
     width: 80%;
     margin: auto;
 }
-
+nav h1{
+  margin-left: 1%;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+}
 nav.category-tabs {
   display: flex;
   justify-content: space-between; /* separa esquerda, centro e direita */
@@ -92,15 +97,16 @@ nav.category-tabs {
 .recipe-list {
     flex: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 350px));
     gap: 20px;
+    max-height: 500px;
+    margin-top: 0; /* remover o espaço extra */
 }
 
-/* Este botão aparece no topo e ocupa a largura toda da grade */
-.recipe-list .add-button {
-    grid-column: 1 / -1;
+.add-button {
     height: 50px;
-    max-width: 270px;
+    width: 80%;
+    max-width: 250px;
     background-color: #d1c4e9;
     color: #333;
     border: none;
@@ -112,6 +118,7 @@ nav.category-tabs {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px; /* Espaço entre botão e os cards */
 }
 
 /* CARDS DE RECEITA */
@@ -123,6 +130,7 @@ nav.category-tabs {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    max-height: 350px;
 }
 
 .card.selecionado {

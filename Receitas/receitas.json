@@ -10,13 +10,53 @@
         "iniciais": "AS"
     },
     {
-        "nome": "Feijão preto",
-        "autor": "Felipe Ghizoni",
-        "ingredientes": "2 xícaras de feijão preto\r\n1 folha de louro\r\n100g de bacon em cubos\r\n1 gomo de linguiça calabresa em rodelas\r\n1 cebola picada\r\n2 dentes de alho picados",
-        "modo_preparo": "Lave o feijão e coloque na panela de pressão com água e o louro; cozinhe por 25 minutos após pegar pressão.\r\nEm outra panela, frite o bacon e a calabresa até dourarem.\r\nAdicione a cebola e o alho e refogue até murcharem.\r\nJunte o feijão cozido (com caldo), tempere com sal e pimenta.\r\nCozinhe por mais 10 minutos em fogo baixo para apurar o sabor.",
-        "imagem": "img/feijao.png",
+        "nome": "Purê de Aipim com Queijo ",
+        "autor": "Juliana de Souza ",
+        "ingredientes": "1 kg de aipim.\r\n300 g de queijo mussarela ralado.\r\n3 colheres de margarina.\r\n2 e 1/2 copos de leite.\r\nSal a gosto.",
+        "modo_preparo": " Descasque o aipim e coloque na pressão por 30 minutos, ou então até ele ficar desmanchando.\r\n\r\n- Amasse o aipim e separe.\r\n\r\n- Em uma panela grande coloque o sal, a margarina e o leite.\r\n\r\n- Deixe a mistura em um fogo baixo até a margarina derreter.\r\n\r\n- Depois da mistura ficar homogênea coloque o aipim amassado e mexa até formar uma pasta.\r\n\r\n- Quando o aipim estiver soltando da panela coloque o queijo e misture de leve.\r\n\r\n- Depois é só servir. ",
+        "imagem": "img/355312-original.png",
         "categoria": "Salgados",
-        "descricao": "Feijão preto tradicional",
-        "iniciais": "FG"
+        "descricao": "Purê DELICIOSO",
+        "iniciais": "JDS"
+    },
+    {
+        "nome": "Alfajor",
+        "autor": "Tuângi Feldhaus",
+        "ingredientes": "Cobertura\r\nchocolate meio amargo\r\n200 g de chocolate meio amargo picado\r\nMassa\r\nmanteiga\r\n1 xícara (chá) de manteiga em temperatura ambiente\r\naçúcar\r\n1 xícara (chá) de açúcar\r\ngema de ovo\r\n3 gemas\r\nessência de baunilha\r\n2 colheres (chá) de essência de baunilha\r\nraspas de limão\r\n1 colher (sopa) de raspas de limão\r\nconhaque\r\n1 colher (sopa) de conhaque\r\nfarinha de trigo\r\n2 xícaras (chá) de farinha de trigo\r\namido de milho\r\n2 xícaras (chá) de maizena\r\nfermento em pó químico\r\n1 colher (sopa) de fermento em pó\r\n6 colheres (sopa) de leite gelado\r\nRecheio\r\ndoce de leite\r\n300 g de doce de leite cremoso\r\nessência de baunilha\r\n2 colheres (chá) de essência de baunilha",
+        "modo_preparo": "1Ligue o forno a temperatura média.\r\n\r\n2Misture em uma tigela a manteiga (reserve 1 colher (sopa)), o açúcar, as gemas, a baunilha, as raspas de limão e o conhaque até ficar cremoso e homogêneo.\r\n\r\n3\r\nJunte, aos poucos, a farinha peneirada com a maisena e o fermento, simultaneamente com o leite.\r\n\r\n4\r\nSe necessário, junte mais farinha.\r\n\r\n5\r\nTransfira para uma superfície lisa e sove até desgrudar das mãos.\r\n\r\n6\r\nDeixe descansar por 15 minutos.\r\n\r\n7\r\nAbra a massa numa superfície enfarinhada até obter 1 cm de altura.\r\n\r\n8\r\nCorte em 32 círculos de 5 cm de diâmetro, e coloque-os em assadeiras, untadas com a manteiga reservada.\r\n\r\n9\r\nLeve ao forno por 15 minutos, ou até dourar.\r\n\r\n10\r\nRetire do forno, desenforme e deixe esfriar.\r\n\r\n11\r\nUna os círculos com o doce de leite misturado com a baunilha, formando os alfajores.\r\n\r\n12\r\nCobertura\r\nDerreta o chocolate em banho-maria e banhe os alfajores, um a um.\r\n\r\n13\r\nColoque-os numa fôrma forrada com papel-alumínio e leve à geladeira por 20 minutos, ou até ficar firme.",
+        "imagem": "img/46122-40618-original-1.png",
+        "categoria": "Doces",
+        "descricao": "",
+        "iniciais": "TF"
+    },
+    {
+        "nome": "Bombom de uva na travessa ",
+        "autor": "Anna Júlia dos Santos",
+        "ingredientes": "Creme branco: \r\n\r\n- Duas latas de leite condensado \r\n- Duas latas de creme de leite \r\n- 6 colheres de sopa de leite em pó\r\n\r\nCobertura de chocolate : \r\n- 1 lata de creme de leite\r\n- 1 barra e meia de chocolate ao leite\r\n- Uvas a gosto\r\n",
+        "modo_preparo": "Em uma panela com o fogo desligado, misture o reme de leite, leite condensado e leite em pó\r\nLigue o fogo e misture até ficar em uma consistência grossa\r\nMisture  as uvas no creme branco e deixe esfriar por 20 min\r\n\r\nEm outra panela coloque a barra de chocolate e o creme de leite para derreter. \r\nEm uma travessa despeje o creme branco e logo depois adicione o chocolate derretido por cima. \r\n\r\nSe quiser decorar a sobremesa com uvas por cima pode também \r\n(opcional) \r\n ",
+        "imagem": "img/bombom-de-uva-na-travesa-05-04-1024x683.png",
+        "categoria": "Doces",
+        "descricao": "Bombom de uva na Travessa ",
+        "iniciais": "AJDS"
+    },
+    {
+        "nome": "Batida de morango ",
+        "autor": "Tassiana ",
+        "ingredientes": "- 1 lata de leite condensado \r\n- 1 lata de morango( medida da lata de  leite condensado) \r\n- 1 lata de vodka ou pinga( medida da lata de leite condensado ) \r\ngelo.  ",
+        "modo_preparo": "Coloque todos os ingredientes dentro do liquidificador, bata até quando achar que está no ponto certo. \r\n\r\nPara quem gosta de bebida mais fraca, só adicionar uma medida de água.",
+        "imagem": "img/DRINKM.png",
+        "categoria": "Drinks",
+        "descricao": "Batida de morango ",
+        "iniciais": "T"
+    },
+    {
+        "nome": "Caipirinha de Vinho ",
+        "autor": "Por tudo Gostoso ",
+        "ingredientes": "-1 garrafa de vinho suave\r\n-1/2 garrafa de cachaça\r\n-2 ou 3 limões\r\n-Cubos de gelo ou gelo triturado\r\n-Açúcar a gosto\r\n\r\n",
+        "modo_preparo": "Esprema o limão na peneira para que não fiquem as \"pelinhas\".\r\n\r\nMisture o vinho e a cachaça no liquidificador com o limão e o açúcar, lembrando que o açúcar é a gosto.\r\n\r\nBata por alguns segundos.\r\n\r\nColoque a caipirinha no copo com gelo para enfeitar a bebida.\r\n\r\nFatie algumas rodelas de limão e coloque na beira do copo.\r\n",
+        "imagem": "img/caipirinha_de_vinho_2927_paso_2_orig.png",
+        "categoria": "Drinks",
+        "descricao": "",
+        "iniciais": "PTG"
     }
 ]

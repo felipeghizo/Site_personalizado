@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Admin - Gourmet Receitas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='adminHome_style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/icone.png') }}">
 </head>
 <body>
 
     <nav class="category-tabs">
         <div class="tabs-left">
             <img src="../static/img/icone.png" style="width: 40px;">
+            <h1>Gourmet Receitas</h1>
         </div>
         <div class="tabs-center">
             <button class="active" data-categoria="Salgados">Salgados</button>
@@ -22,8 +24,8 @@
     </nav>
 
     <main class="container">
+        <a class="add-button" href="{{ url_for('admin.add_receita') }}">Adicionar receita</a>
         <section class="recipe-list">
-            <a class="add-button" href="{{ url_for('admin.add_receita') }}">Adicionar receita</a>
             <!-- Cards serão renderizados dinamicamente via JavaScript -->
         </section>
 
@@ -78,9 +80,7 @@
         }
 
         function renderizarReceitas(categoria) {
-            listaContainer.innerHTML = `
-                <a class="add-button" href="{{ url_for('admin.add_receita') }}">Adicionar receita</a>
-            `;
+            listaContainer.innerHTML = '';
 
             const receitasFiltradas = dadosReceitas.filter(r => r.categoria === categoria);
 
@@ -113,7 +113,12 @@
             detalheTitulo.innerText = '';
             detalheAutor.innerText = '';
             detalheDescricao.innerText = 'Selecione uma receita para ver os detalhes.';
+            detalheIngredientes.innerText = '';
+            detalheModoPreparo.innerText = '';
             botoesDetalhes.forEach(btn => btn.style.display = "none");
+
+            // Remove destaque de cards selecionados antigos
+            document.querySelectorAll('.card.selecionado').forEach(c => c.classList.remove('selecionado'));
         }
 
         botoesCategoria.forEach(btn => {

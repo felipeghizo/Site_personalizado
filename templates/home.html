@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Gourmet Receitas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/icone.png') }}">
 </head>
 <body>
 
     <nav class="category-tabs">
         <div class="tabs-left">
             <img src="../static/img/icone.png" style="width: 40px;">
+            <h1>Gourmet Receitas</h1>
         </div>
         <div class="tabs-center">
             <button class="active" data-categoria="Salgados">Salgados</button>
@@ -119,15 +121,12 @@
         botoesCategoria.forEach(btn => {
             btn.addEventListener('click', () => {
                 categoriaAtual = btn.dataset.categoria;
-
                 botoesCategoria.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-
                 renderizarReceitas(categoriaAtual);
             });
         });
 
-        // Inicialização
         renderizarReceitas(categoriaAtual);
     </script>
 

@@ -28,7 +28,12 @@ body > * {
   position: relative;
   z-index: 1;
 }
-
+nav h1{
+  margin-left: 1%;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+}
 nav.category-tabs {
   display: flex;
   justify-content: space-between; /* separa esquerda, centro e direita */
